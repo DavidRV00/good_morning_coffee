@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/art/background.png" type="Texture" id=1]
 [ext_resource path="res://cabs.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://coffeemachine.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 74.5, 86 )
@@ -77,6 +78,10 @@ position = Vector2( 427, 90 )
 position = Vector2( 55, -54.5 )
 shape = SubResource( 6 )
 
+[node name="coffeemachine" parent="." instance=ExtResource( 4 )]
+position = Vector2( 764, 333 )
+
+[connection signal="machine_finished" from="." to="." method="_on_machine_finished"]
 [connection signal="mouse_entered" from="cab0" to="." method="cab_open" binds= [ 0 ]]
 [connection signal="mouse_exited" from="cab0" to="." method="cab_close" binds= [ 0 ]]
 [connection signal="mouse_entered" from="cab1" to="." method="cab_open" binds= [ 1 ]]
@@ -89,3 +94,4 @@ shape = SubResource( 6 )
 [connection signal="mouse_exited" from="cabtl" to="." method="cab_close" binds= [ 4 ]]
 [connection signal="mouse_entered" from="cabtr" to="." method="cab_open" binds= [ 5 ]]
 [connection signal="mouse_exited" from="cabtr" to="." method="cab_close" binds= [ 5 ]]
+[connection signal="input_event" from="coffeemachine" to="." method="coffeemachine_clicked"]
