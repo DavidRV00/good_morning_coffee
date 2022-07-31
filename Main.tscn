@@ -5,22 +5,22 @@
 [ext_resource path="res://Main.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 76, 86 )
+extents = Vector2( 74.5, 86 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 76.75, 86 )
+extents = Vector2( 73.5, 86 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 76.5, 86 )
+extents = Vector2( 72, 86 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 76.75, 86.25 )
+extents = Vector2( 75.75, 86.25 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 54.5, 31.75 )
+extents = Vector2( 51.5, 31.75 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 54.5, 32.5 )
+extents = Vector2( 51, 32.5 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 3 )
@@ -39,53 +39,53 @@ __meta__ = {
 }
 
 [node name="rect" type="CollisionShape2D" parent="cab0"]
-position = Vector2( 66, 76 )
+position = Vector2( 64.5, 76 )
 shape = SubResource( 1 )
 
 [node name="cab1" type="Area2D" parent="."]
 position = Vector2( 427, 90 )
 
 [node name="rect" type="CollisionShape2D" parent="cab1"]
-position = Vector2( -190.75, 0 )
+position = Vector2( -191.5, 0 )
 shape = SubResource( 2 )
 
 [node name="cab2" type="Area2D" parent="."]
 position = Vector2( 427, 90 )
 
 [node name="rect" type="CollisionShape2D" parent="cab2"]
-position = Vector2( 189.5, 0 )
+position = Vector2( 190, 0 )
 shape = SubResource( 3 )
 
 [node name="cab3" type="Area2D" parent="."]
 position = Vector2( 427, 90 )
 
 [node name="rect" type="CollisionShape2D" parent="cab3"]
-position = Vector2( 348.75, -0.25 )
+position = Vector2( 349.75, -0.25 )
 shape = SubResource( 4 )
 
 [node name="cabtl" type="Area2D" parent="."]
 position = Vector2( 427, 90 )
 
 [node name="rect" type="CollisionShape2D" parent="cabtl"]
-position = Vector2( -56.5, -54.25 )
+position = Vector2( -57.5, -54.25 )
 shape = SubResource( 5 )
 
 [node name="cabtr" type="Area2D" parent="."]
 position = Vector2( 427, 90 )
 
 [node name="rect" type="CollisionShape2D" parent="cabtr"]
-position = Vector2( 55.5, -54.5 )
+position = Vector2( 55, -54.5 )
 shape = SubResource( 6 )
 
 [connection signal="mouse_entered" from="cab0" to="." method="cab_open" binds= [ 0 ]]
-[connection signal="mouse_exited" from="cab0" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cab0" to="." method="cab_close" binds= [ 0 ]]
 [connection signal="mouse_entered" from="cab1" to="." method="cab_open" binds= [ 1 ]]
-[connection signal="mouse_exited" from="cab1" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cab1" to="." method="cab_close" binds= [ 1 ]]
 [connection signal="mouse_entered" from="cab2" to="." method="cab_open" binds= [ 2 ]]
-[connection signal="mouse_exited" from="cab2" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cab2" to="." method="cab_close" binds= [ 2 ]]
 [connection signal="mouse_entered" from="cab3" to="." method="cab_open" binds= [ 3 ]]
-[connection signal="mouse_exited" from="cab3" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cab3" to="." method="cab_close" binds= [ 3 ]]
 [connection signal="mouse_entered" from="cabtl" to="." method="cab_open" binds= [ 4 ]]
-[connection signal="mouse_exited" from="cabtl" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cabtl" to="." method="cab_close" binds= [ 4 ]]
 [connection signal="mouse_entered" from="cabtr" to="." method="cab_open" binds= [ 5 ]]
-[connection signal="mouse_exited" from="cabtr" to="." method="cab_close"]
+[connection signal="mouse_exited" from="cabtr" to="." method="cab_close" binds= [ 5 ]]
