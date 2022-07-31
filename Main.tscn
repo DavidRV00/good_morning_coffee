@@ -94,4 +94,4 @@ position = Vector2( 764, 333 )
 [connection signal="mouse_exited" from="cabtl" to="." method="cab_close" binds= [ 4 ]]
 [connection signal="mouse_entered" from="cabtr" to="." method="cab_open" binds= [ 5 ]]
 [connection signal="mouse_exited" from="cabtr" to="." method="cab_close" binds= [ 5 ]]
-[connection signal="input_event" from="coffeemachine" to="." method="coffeemachine_clicked"]
+[connection signal="input_event" from="coffeemachine" to="." method="_on_coffeemachine_input_event"]

@@ -26,7 +26,7 @@ func cab_close(num):
 	if cab_state == num:
 		cab_state = null
 
-func coffeemachine_clicked(viewport, event, shape_idx):
+func _on_coffeemachine_input_event(viewport, event, shape_idx):
 	if not (event is InputEventMouseButton && event.pressed):
 		return
 	if machine_sprite.animation != "empty":
@@ -36,3 +36,5 @@ func coffeemachine_clicked(viewport, event, shape_idx):
 
 func _on_machine_finished():
 	print("MACHINE FINISHED")
+
+
